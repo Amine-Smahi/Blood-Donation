@@ -16,21 +16,48 @@ public class DonnorActivity extends AppCompatActivity {
     ListView list;
 
     String[] maintitle ={
-            "Title 1","Title 2",
-            "Title 3","Title 4",
-            "Title 5",
+            "Amine Smahi","Oussama Bonnor",
+            "Mohammed Benothman","Abed kibbir",
+            "Oussama Zauoi",
+            "Amine Smahi","Oussama Bonnor",
+            "Mohammed Benothman","Abed kibbir",
+            "Oussama Zauoi",
+            "Amine Smahi","Oussama Bonnor",
+            "Mohammed Benothman","Abed kibbir",
+            "Oussama Zauoi",
+            "Amine Smahi","Oussama Bonnor",
+            "Mohammed Benothman","Abed kibbir",
+            "Oussama Zauoi",
     };
 
     String[] subtitle ={
-            "Sub Title 1","Sub Title 2",
-            "Sub Title 3","Sub Title 4",
-            "Sub Title 5",
+            "2 miles","5 miles",
+            "4 miles","7 miles",
+            "8 miles",
+            "2 miles","5 miles",
+            "4 miles","7 miles",
+            "8 miles",
+            "2 miles","5 miles",
+            "4 miles","7 miles",
+            "8 miles",
+            "2 miles","5 miles",
+            "4 miles","7 miles",
+            "8 miles",
     };
 
     Integer[] imgid={
-            R.mipmap.profile,R.mipmap.profile,
-            R.mipmap.profile,R.mipmap.profile,
-            R.mipmap.profile,
+            R.mipmap.avatar1,R.mipmap.avatar2,
+            R.mipmap.avatar3,R.mipmap.avatar1,
+            R.mipmap.avatar2,
+            R.mipmap.avatar1,R.mipmap.avatar2,
+            R.mipmap.avatar3,R.mipmap.avatar1,
+            R.mipmap.avatar2,
+            R.mipmap.avatar1,R.mipmap.avatar2,
+            R.mipmap.avatar3,R.mipmap.avatar1,
+            R.mipmap.avatar2,
+            R.mipmap.avatar1,R.mipmap.avatar2,
+            R.mipmap.avatar3,R.mipmap.avatar1,
+            R.mipmap.avatar2,
     };
 
     @Override

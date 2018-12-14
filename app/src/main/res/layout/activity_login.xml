@@ -84,7 +84,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="0dp"
-        android:background="@drawable/shapelogin"/>
+        android:background="@drawable/shapelogin"
+        android:onClick="GoToDonnors"/>
 
     <Button
         android:layout_width="match_parent"

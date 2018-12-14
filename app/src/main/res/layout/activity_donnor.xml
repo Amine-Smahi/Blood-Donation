@@ -12,17 +12,21 @@
         android:layout_height="65dp"
         android:background="@drawable/card_background">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="#FAFAFA"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:src="@mipmap/profile"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"/>
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="#FAFAFA"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#fff"
+            android:src="@mipmap/settings"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"/>
@@ -41,18 +45,22 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp"
+            />
         <Button
-            android:layout_alignBottom="@+id/list"
+            android:layout_alignParentBottom="true"
             android:background="#E62E2E"
             android:textColor="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Make Request"/>
+            android:text="Make Request"
+            />
     </RelativeLayout>
 </LinearLayout>
