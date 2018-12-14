@@ -26,6 +26,14 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="#fff"
+            android:src="@mipmap/search"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#fff"
             android:src="@mipmap/settings"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
