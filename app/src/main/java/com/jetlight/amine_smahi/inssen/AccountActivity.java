@@ -1,23 +1,22 @@
 package com.jetlight.amine_smahi.inssen;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
-public class ProfileActivity extends AppCompatActivity {
+public class AccountActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_account);
     }
-    public void CallHim(View view)
-    {
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:0123456789"));
-        startActivity(intent);
+
+    public void Save(View view) {
+        Toast.makeText(AccountActivity.this, "Information saved!",
+                Toast.LENGTH_LONG).show();
     }
     public void MyProfile(View view)
     {

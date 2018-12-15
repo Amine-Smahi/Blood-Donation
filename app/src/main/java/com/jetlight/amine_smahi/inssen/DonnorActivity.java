@@ -1,13 +1,16 @@
 package com.jetlight.amine_smahi.inssen;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -16,7 +19,7 @@ import java.util.ArrayList;
 public class DonnorActivity extends AppCompatActivity {
 
     ListView list;
-
+    Button btnRequest;
     String[] maintitle ={
             "Amine Smahi","Oussama Bonnor",
             "Mohammed Benothman","Abed kibbir",
@@ -79,6 +82,7 @@ public class DonnorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_donnor);
         MyListAdapter adapter=new MyListAdapter(this, maintitle, subtitle,imgid);
         list=(ListView)findViewById(R.id.list);
+        btnRequest= (Button) findViewById(R.id.btnRequest);
         list.setAdapter(adapter);
 
 
@@ -112,5 +116,47 @@ public class DonnorActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void GoSearch(View view) {
+        Intent intent = new Intent(this,SearchActivity.class);
+        startActivity(intent);
+    }
+
+    public void Request(View view) {
+        if( btnRequest.getText().equals("Make Request")) {
+            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case DialogInterface.BUTTON_POSITIVE:
+                            //Yes button clicked
+
+                            Toast.makeText(DonnorActivity.this, "You requested for AB+ blood type!",
+                                    Toast.LENGTH_LONG).show();
+                            btnRequest.setText("Request Status");
+                            break;
+
+                        case DialogInterface.BUTTON_NEGATIVE:
+                            //No button clicked
+                            break;
+                    }
+                }
+
+            };
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
+                    .setNegativeButton("No", dialogClickListener).show();
+        }
+        else {
+            Intent intent = new Intent(this,StatusActivity.class);
+            startActivity(intent);
+        }
+    }
+    public void MyProfile(View view)
+    {
+        Intent intent = new Intent(this,AccountActivity.class);
+        startActivity(intent);
     }
 }
